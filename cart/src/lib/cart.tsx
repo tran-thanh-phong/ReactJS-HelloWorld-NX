@@ -1,18 +1,18 @@
-import styled from 'styled-components';
+import { Banner } from '@store/shared/ui';
+import { Link } from 'react-router-dom';
+import styles from './cart.module.css';
 
 /* eslint-disable-next-line */
-export interface CartProps {}
+export interface RoutesCartProps {}
 
-const StyledCart = styled.div`
-  color: pink;
-`;
-
-export function Cart(props: CartProps) {
+export function RoutesCart(props: RoutesCartProps) {
   return (
-    <StyledCart>
-      <h1>Welcome to Cart!</h1>
-    </StyledCart>
+    <div className={styles['container']}>
+      <h1>Shopping Cart</h1>
+      <Banner text="Welcome to the cart." />
+      <Link to="/">Continue Shopping</Link>
+    </div>
   );
 }
 
-export default Cart;
+export default RoutesCart;
